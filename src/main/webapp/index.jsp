@@ -78,7 +78,7 @@
 </div>
 
 <div class="container message" id="message-container">
-    <h1>Welcome Venkatesh</h1>
+    <h1>Welcome Dileep </h1>
     <h1>Lets Rock on 31st night</h1>
     <p>The New Year is fast approaching and celebrations are flowing in everywhere every minute. At the end of 2024, people are gearing up to make new promises and new beginnings for 2025. Its time to make New Year’s resolutions that will help people achieve their goals. The start of each year contains a lot of positivity, good energy, and good vibes. People celebrate this day by spending time with their friends, family, and loved ones. Many celebrations make this moment truly memorable and worth remembering! On the occasion of Happy New Year 2025, here are some wishes, and messages, to share with loved ones..</p>
     <button class="logout-btn" onclick="logout()">Logout</button>
@@ -86,8 +86,8 @@
 
 <script>
     // Hardcoded credentials (for demonstration purposes)
-    const correctUsername = "venkatesh";
-    const correctPassword = "venky123";
+    const correctUsername = "Dileep";
+    const correctPassword = "Dileep123";
 
     // Login logic
     document.getElementById('loginForm').addEventListener('submit', function(event) {
