@@ -70,8 +70,8 @@
     <h1>Login</h1>
     <div class="login-form">
         <form id="loginForm">
-            <input type="text" id="venkatesh" placeholder="Username" required><br>
-            <input type="password" id="Venkatesh p" placeholder="Password" required><br>
+            <input type="venkatesh" id="venkatesh" placeholder="Username" required><br>
+            <input type="Venkatesh p" id="Venkatesh p" placeholder="Password" required><br>
             <button type="submit">Login</button>
         </form>
     </div>
