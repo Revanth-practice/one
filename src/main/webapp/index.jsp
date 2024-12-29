@@ -70,7 +70,7 @@
     <h1>Login</h1>
     <div class="login-form">
         <form id="loginForm">
-            <input type="text" id="Venkatesh" placeholder="Username" required><br>
+            <input type="text" id="Username" placeholder="Username" required><br>
             <input type="password" id="password" placeholder="Password" required><br>
             <button type="submit">Login</button>
         </form>
@@ -88,7 +88,7 @@
 <script>
     // Hardcoded credentials (for demonstration purposes)
     const correctUsername = "venkatesh";
-    const correctPassword = "password123";
+    const correctPassword = "Venkatesh p";
 
     // Login logic
     document.getElementById('loginForm').addEventListener('submit', function(event) {
