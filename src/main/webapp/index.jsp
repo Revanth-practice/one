@@ -7,20 +7,54 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
         }
         .container {
             max-width: 400px;
-            margin: 0 auto;
+            margin: 100px auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            text-align: center;
         }
         .hidden {
             display: none;
         }
-        .login-form, .logout-btn {
+        .login-form input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #45a049;
+        }
+        .message {
             margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .logout-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logout-btn:hover {
+            background-color: #e53935;
         }
     </style>
 </head>
@@ -31,61 +65,71 @@
     <div class="login-form" id="login-form">
         <h2>Login</h2>
         <form id="loginForm">
-            <input type="text" id="username" placeholder="Username" required><br><br>
-            <input type="password" id="password" placeholder="Password" required><br><br>
+            <input type="text" id="Venkatesh" placeholder="Username" required><br>
+            <input type="password" id="venkatesh" placeholder="Password" required><br>
             <button type="submit">Login</button>
         </form>
     </div>
 
-    <!-- Welcome Message and Logout Button -->
-    <div class="logout-btn hidden" id="logout-btn">
+    <!-- Friendship Message and Logout Button -->
+    <div class="message hidden" id="friendship-message">
         <h2>Welcome, <span id="user-name"></span>!</h2>
-        <button onclick="logout()">Logout</button>
+        <p>Hello Venkatesh.</p>
+        <p>How are you? Hope you are fine.</p>
+        <p>Lets Rock on 31st night.</p>
+    <div class="container">
+    <h1>Alcohol Drink Bottle with Open Cap</h1>
+    <!-- Replace the src attribute with your image source -->
+    <img src="https://example.com/your-alcohol-bottle-image.jpg" alt="Alcohol Bottle with Open Cap">
+
+    <div class="caption">
+        A bottle of alcohol with the cap being opened.
+        <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
 </div>
 
 <script>
-    // Check if the user is already logged in
+    // On page load, check if the user is already logged in
     window.onload = function() {
-        if(localStorage.getItem("loggedIn") === "true") {
-            showLogoutPage();
+        if (localStorage.getItem("loggedIn") === "true") {
+            showFriendshipMessage();
         } else {
             showLoginPage();
         }
     };
 
-    // Show Login Form
+    // Display the login form
     function showLoginPage() {
         document.getElementById("login-form").classList.remove("hidden");
-        document.getElementById("logout-btn").classList.add("hidden");
+        document.getElementById("friendship-message").classList.add("hidden");
     }
 
-    // Show Logout Page
-    function showLogoutPage() {
+    // Display the friendship message and logout button
+    function showFriendshipMessage() {
         const username = localStorage.getItem("username");
         document.getElementById("user-name").innerText = username;
         document.getElementById("login-form").classList.add("hidden");
-        document.getElementById("logout-btn").classList.remove("hidden");
+        document.getElementById("friendship-message").classList.remove("hidden");
     }
 
-    // Handle Login Form Submit
+    // Handle login form submission
     document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault();
 
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
-        // Here you can add your login verification logic (e.g., checking against a database)
+        // Simple validation (in a real-world scenario, you would validate against a database)
         if (username && password) {
             localStorage.setItem("loggedIn", "true");
             localStorage.setItem("username", username);
-            showLogoutPage();
+            showFriendshipMessage();
         } else {
             alert("Please enter a valid username and password.");
         }
     });
 
-    // Logout Function
+    // Handle logout
     function logout() {
         localStorage.removeItem("loggedIn");
         localStorage.removeItem("username");
