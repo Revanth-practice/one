@@ -70,8 +70,8 @@
     <h1>Login</h1>
     <div class="login-form">
         <form id="loginForm">
-            <input type="text" id="Venkatesh" placeholder="Venkatesh" required><br>
-            <input type="password" id="Venkatesh p" placeholder="Venkatesh p" required><br>
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
             <button type="submit">Login</button>
         </form>
     </div>
@@ -86,6 +86,10 @@
 </div>
 
 <script>
+    // Hardcoded credentials (for demonstration purposes)
+    const correctUsername = "venkatesh";
+    const correctPassword = "password123";
+
     // Login logic
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -94,18 +98,18 @@
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
 
-        // Simple validation (replace with actual logic in production)
-        if (username && password) {
+        // Check if username and password are correct
+        if (username === correctUsername && password === correctPassword) {
             // Store login state in localStorage
             localStorage.setItem('loggedIn', 'true');
             localStorage.setItem('username', username);
             showMessagePage();
         } else {
-            alert('Please enter a valid username and password.');
+            alert('Invalid username or password. Please try again.');
         }
     });
 
-    // Show the login page or the message page based on login state
+    // Show the message page after login
     function showMessagePage() {
         document.getElementById('login-container').style.display = 'none';
         document.getElementById('message-container').style.display = 'block';
