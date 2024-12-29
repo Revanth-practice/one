@@ -66,7 +66,7 @@
         <h2>Login</h2>
         <form id="loginForm">
             <input type="text" id="Venkatesh" placeholder="Username" required><br>
-            <input type="password" id="venkatesh" placeholder="Password" required><br>
+            <input type="password" id="venkatesh p" placeholder="Password" required><br>
             <button type="submit">Login</button>
         </form>
     </div>
@@ -78,12 +78,10 @@
         <p>How are you? Hope you are fine.</p>
         <p>Lets Rock on 31st night.</p>
     <div class="container">
-    <h1>Alcohol Drink Bottle with Open Cap</h1>
     <!-- Replace the src attribute with your image source -->
-    <img src="https://example.com/your-alcohol-bottle-image.jpg" alt="Alcohol Bottle with Open Cap">
+    <img src="https://www.freepik.com/premium-photo/open-bottle-beer_5391266.htm" alt="Alcohol Bottle with Open Cap">
 
     <div class="caption">
-        A bottle of alcohol with the cap being opened.
         <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
 </div>
