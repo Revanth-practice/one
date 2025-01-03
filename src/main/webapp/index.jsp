@@ -86,8 +86,8 @@
 
 <script>
     // Hardcoded credentials (for demonstration purposes)
-    const correctUsername = "Dileep";
-    const correctPassword = "Dileep123";
+    const correctUsername = "Venkatesh";
+    const correctPassword = "Venkatesh123";
 
     // Login logic
     document.getElementById('loginForm').addEventListener('submit', function(event) {
